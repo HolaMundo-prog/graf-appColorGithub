@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector de Color RGB</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-light d-flex justify-content-center align-items-center vh-100">
+
+  <div class="container card shadow-lg border-0 p-4 rounded-4 color-card">
+    <div class="row g-4 align-items-center">
+
+      <!-- Controles -->
+      <div class="col-md-7">
+        <h3 class="mb-4 fw-bold text-accent">🎨 Selector RGB</h3>
+
+        <!-- Sliders -->
+        <div class="mb-3">
+          <label class="form-label">Rojo</label>
+          <input type="range" min="0" max="255" id="redRange" class="form-range">
+          <input type="number" min="0" max="255" id="redInput" class="form-control form-control-sm mt-2">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Verde</label>
+          <input type="range" min="0" max="255" id="greenRange" class="form-range">
+          <input type="number" min="0" max="255" id="greenInput" class="form-control form-control-sm mt-2">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Azul</label>
+          <input type="range" min="0" max="255" id="blueRange" class="form-range">
+          <input type="number" min="0" max="255" id="blueInput" class="form-control form-control-sm mt-2">
+        </div>
+
+        <!-- Color Picker -->
+        <div class="mb-3">
+          <label class="form-label">Elige un color</label>
+          <input type="color" id="colorPicker" class="form-control form-control-color">
+        </div>
+
+        <!-- Código HEX -->
+        <div class="mt-4">
+          <h5 class="fw-bold">Código Hex:</h5>
+          <div id="hexCode" class="p-2 rounded bg-black text-center fs-5"></div>
+        </div>
+      </div>
+
+      <!-- Vista de color -->
+      <div class="col-md-5 d-flex flex-column align-items-center justify-content-center">
+        <div id="colorBox" class="color-box shadow-lg rounded-4"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
